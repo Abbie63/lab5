@@ -50,6 +50,10 @@ public class CommandProcessing {
                 RemoveGreaterKeyCommand removeGreaterKeyCommand = new RemoveGreaterKeyCommand();
                 removeGreaterKeyCommand.execute(command);
                 break;
+            case("remove_lower"):
+                RemoveLowerCommand removeLowerCommand = new RemoveLowerCommand();
+                removeLowerCommand.execute(command);
+                break;
             default:
                 System.out.println("такой команды нет");;
                 break;
