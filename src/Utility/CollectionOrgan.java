@@ -31,5 +31,10 @@ public class CollectionOrgan {
             cityHashMap.remove(i);
         }
     }
+    public static void remove_lower(int key){
+        for(int i = key - 1; i >= 1; --i){
+            cityHashMap.remove(i);
+        }
+    }
 
 }

@@ -29,7 +29,7 @@ public class RemoveLowerCommand implements Command{
                         if(CollectionOrgan.cityHashMap.containsKey(key)){
                             try {
                                 if(CollectionOrgan.cityHashMap.containsKey(key-1)){
-                                    CollectionOrgan.remove_greater_key(key);
+                                    CollectionOrgan.remove_lower(key);
                                     System.out.println("Строки успешно удалены");
                                 } else throw new WrongIdException();
                             } catch (WrongIdException ex3){
