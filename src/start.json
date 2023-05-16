@@ -1,0 +1,42 @@
+{
+  "City": [
+    {
+      "id": 1,
+      "name": "Saint-Petersburg",
+      "coordinates": {
+        "x": 59,
+        "y": 30
+      },
+      "creationDate": "16-05-2023",
+      "area": 1439,
+      "population": 5598486,
+      "metersAboveSeaLevel": 3,
+      "carCode": 79,
+      "climate": "TEMPERATE",
+      "governor": {
+        "age": 66,
+        "height": 170
+      },
+      "government": "TIMOCRACY"
+    },
+    {
+      "id": 2,
+      "name": "Moscow",
+      "coordinates": {
+        "x": 55,
+        "y": 37
+      },
+      "creationDate": "16-05-2023",
+      "area": 2561,
+      "population": 13097539,
+      "metersAboveSeaLevel": 170,
+      "carCode": 78,
+      "climate": "CONTINENTAL",
+      "governor": {
+        "age": 64,
+        "height": 175
+      },
+      "government": "TIMOCRACY"
+    }
+    ]
+}

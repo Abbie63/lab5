@@ -1,5 +1,8 @@
 package CityData;
 
+import Exceptions.IncorrectIdException;
+import Exceptions.IncorrectValueException;
+
 import java.util.Date;
 
 public class City {
@@ -52,7 +55,10 @@ public class City {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(long id) throws IncorrectIdException {
+        if (id <= -0) {
+            throw new IncorrectIdException("Id должно быть больше 0");
+        }
         this.id = id;
     }
 
@@ -60,7 +66,10 @@ public class City {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws IncorrectValueException{
+        if(name == null || name.isEmpty()){
+            throw new IncorrectValueException("Name не может быть null или быть пустым");
+        }
         this.name = name;
     }
 
@@ -68,7 +77,10 @@ public class City {
         return coordinates;
     }
 
-    public void setCoordinates(Coordinates coordinates) {
+    public void setCoordinates(Coordinates coordinates) throws IncorrectValueException{
+        if(coordinates == null){
+            throw new IncorrectValueException("coordinates не может быть null");
+        }
         this.coordinates = coordinates;
     }
 
@@ -76,7 +88,10 @@ public class City {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(Date creationDate) throws IncorrectValueException {
+        if(creationDate == null){
+            throw new IncorrectValueException("creationDate не может быть null");
+        }
         this.creationDate = creationDate;
     }
 
@@ -84,7 +99,12 @@ public class City {
         return area;
     }
 
-    public void setArea(Long area) {
+    public void setArea(Long area) throws IncorrectValueException{
+        if(area == null){
+            throw new IncorrectValueException("area не может быть null");
+        } else if (area <= 0) {
+            throw new IncorrectValueException("area должно быть больше 0");
+        }
         this.area = area;
     }
 
@@ -92,7 +112,12 @@ public class City {
         return population;
     }
 
-    public void setPopulation(Long population) {
+    public void setPopulation(Long population) throws IncorrectValueException{
+        if(population == null){
+            throw new IncorrectValueException("population не может быть null");
+        } else if (population <= 0) {
+            throw new IncorrectValueException("population должно быть больше 0");
+        }
         this.population = population;
     }
 
@@ -108,7 +133,12 @@ public class City {
         return carCode;
     }
 
-    public void setCarCode(long carCode) {
+    public void setCarCode(long carCode) throws IncorrectValueException{
+        if(carCode > 1000){
+            throw new IncorrectValueException("carCode не может быть больше 1000");
+        } else if (carCode <= 0) {
+            throw new IncorrectValueException("carCode должно быть больше 0");
+        }
         this.carCode = carCode;
     }
 
@@ -116,7 +146,10 @@ public class City {
         return climate;
     }
 
-    public void setClimate(Climate climate) {
+    public void setClimate(Climate climate) throws IncorrectValueException{
+        if(climate == null){
+            throw new IncorrectValueException("climate не может быть null");
+        }
         this.climate = climate;
     }
 
@@ -124,7 +157,10 @@ public class City {
         return government;
     }
 
-    public void setGovernment(Government government) {
+    public void setGovernment(Government government) throws IncorrectValueException{
+        if(government == null){
+            throw new IncorrectValueException("government не может быть null");
+        }
         this.government = government;
     }
 

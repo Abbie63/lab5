@@ -33,6 +33,13 @@ public class CommandProcessing {
                 break;
             case ("info"):
                 System.out.println("Размер коллекции: " + CollectionOrgan.cityHashMap.size() + "\n" +  "Тип коллекции hashmap" );
+
+
+
+                //доделать!!!!!!!!!
+
+
+
                 break;
             case ("exit"):
                 ExitCommand exitCommand = new ExitCommand();

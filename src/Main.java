@@ -9,8 +9,6 @@ public class Main {
         collectionOrgan.collectionPutting();
         CommandProcessing commandProcessing = new CommandProcessing();
         commandProcessing.commandProc();
-
-
     }
 
 
