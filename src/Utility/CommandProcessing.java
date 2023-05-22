@@ -11,6 +11,8 @@ public class CommandProcessing {
     String com, argument1, argument2, line;
     String[] command;
 
+    HashMap<String, Command> commands; // create hashmap and fill commands here
+
     public  void commandProc() throws WrongAmountOfArgumentsException, WrongIdException {
         do {
         System.out.println("enter command");
@@ -21,6 +23,8 @@ public class CommandProcessing {
 
         command = line.split(" ");
         com = command[0];
+
+        commands.get(com).execute();
 
         switch (com) {
             case  ("help"):

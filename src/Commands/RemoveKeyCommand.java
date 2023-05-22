@@ -10,7 +10,7 @@ public class RemoveKeyCommand implements Command{
     }
     @Override
     public String getName() {
-        return "remove_key id";
+        return "remove_key key";
     }
 
     @Override

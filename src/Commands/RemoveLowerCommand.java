@@ -10,7 +10,7 @@ public class RemoveLowerCommand implements Command{
     }
     @Override
     public String getName() {
-        return "remove_lower id";
+        return "remove_lower key";
     }
 
     @Override

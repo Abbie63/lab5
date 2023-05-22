@@ -1,13 +1,15 @@
 package Utility;
 
 import CityData.*;
+import Commands.InsertCommand;
 
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Set;
 
 public class CollectionOrgan {
-    public static HashMap<Integer, City> cityHashMap = new HashMap<Integer, City>();
+
     City city1 = new City(1, "Omsk", new Coordinates(10.5, 4), Date.from(Instant.ofEpochSecond(10)), 1000L, 1000000, 19.5, 44, Climate.DESERT, new Human(900L, 1500.5), Government.IDEOCRACY);
     City city2 = new City(2, "Moscow", new Coordinates(10.5, 4), Date.from(Instant.ofEpochSecond(10)), 1000L, 1000000, 19.5, 44, Climate.DESERT, new Human(900L, 1500.5), Government.IDEOCRACY);
     City city3 = new City(3, "Sochi", new Coordinates(10.5, 4), Date.from(Instant.ofEpochSecond(10)), 1000L, 1000000, 19.5, 44, Climate.DESERT, new Human(900L, 1500.5), Government.IDEOCRACY);
@@ -27,14 +29,25 @@ public class CollectionOrgan {
         cityHashMap.remove(key);
     }
     public static void remove_greater_key(int key){
-        for(int i = key + 1; i <= CollectionOrgan.cityHashMap.size(); ++i){
-            cityHashMap.remove(i);
+//        for(int i = key + 1; i <= CollectionOrgan.cityHashMap.size(); ++i){
+//            cityHashMap.remove(i);
+//        }
+
+        for (Integer element: cityHashMap.keySet()) {
+
         }
+
+
     }
-    public static void remove_lower(int key){
-        for(int i = key - 1; i >= 1; --i){
+    public static void remove_lower(int max){
+        for(int i = max - 1; i >= 1; --i){
             cityHashMap.remove(i);
         }
+
+    }
+
+    public static void insertElement(int key){
+
     }
 
 }

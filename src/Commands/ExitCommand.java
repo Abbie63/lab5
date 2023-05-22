@@ -18,7 +18,7 @@ public class ExitCommand implements Command{
     }
 
     @Override
-    public void execute(String[] arguments) {
+    public void execute() {
 
         try {
             if(arguments.length > 1) throw new WrongAmountOfArgumentsException();

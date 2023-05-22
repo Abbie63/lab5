@@ -10,7 +10,7 @@ public class RemoveGreaterKeyCommand implements Command{
     }
     @Override
     public String getName() {
-        return "remove_greater_key id";
+        return "remove_greater_key key";
     }
 
     @Override
